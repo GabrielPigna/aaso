@@ -1,0 +1,42 @@
+<!--     NAVBAR + BOTTONI PER IL LOG IN E IL SIGN IN    -->
+
+<div class="navbar">
+  <ul>
+    <li class="nav-item">
+      <a routerLink="/signin">Sign up</a>
+    </li>
+</ul>
+</div>
+
+
+<!--     DA VOOGLE IN POI , QUINDI INPUT E LISTA DA AGGIUNGERE ED ELIMINARE    -->
+
+<div class="input-group mb-3" appBetterColor>
+  <h1 class="title"> 
+      <span class="rosso">V</span> 
+      <span class="verde">o</span> 
+      <span class="giallo">o</span> 
+      <span class="blue">g</span> 
+      <span class="verde">l</span> 
+      <span class="rosso">e</span> 
+  </h1>
+</div>
+
+
+<div class="container">
+<div class="row height d-flex justify-content-center align-items-center">
+  <div class="col-md-6">
+    <div class="form">
+      <i class="bi bi-search" (click)="addTask()"></i>
+      <input type="text" class="form-control form-input" placeholder="Search anything..."  [(ngModel)]="nuovaList">
+      <span class="left-pan"><i class="bi bi-mic"></i></span>
+    </div>
+
+    <div class="lista">
+      <ul *ngFor="let lista of list; let i = index">
+        <li> {{lista.name}}</li>
+      </ul>
+    </div>   
+  </div>
+</div>  
+</div>

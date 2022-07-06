@@ -1,0 +1,31 @@
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    background-color: rgba(192, 190, 190, 0.5);
+    box-shadow: 2px 6px 5px rgba(0,0,0,0.4);
+}
+
+*[role="form"] h2 {
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.help-block{
+    color: black;
+}
+
+a{
+    color: black;
+}
+
+small{
+    color: black;
+}

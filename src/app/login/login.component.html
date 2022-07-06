@@ -1,0 +1,37 @@
+<div class="navbar">
+  <ul>
+    <li class="nav-item">
+      <a routerLink="/header">Home</a>
+    </li>
+  </ul>
+</div>
+<br>
+<br>
+<div class="container">
+  <form class="form-horizontal" role="form">
+    <form (ngSubmit)="onLogin(f)" #f="ngForm" >
+      <h2>Log in</h2>
+      <div class="mb-3" id="user-data">
+        <label class="lb"> Email</label>
+        <input type="email" class="form-control" id="email" aria-label="Inserisci Email " name="email" ngModel required email #email="ngModel">
+        <span class="help-block" *ngIf="!email.valid && email.touched"> Per favore inserire un valore valido! </span>
+      </div>
+      <br>
+      <div class="mb-3 align-items-center">
+        <div class="col-auto">
+          <label class="password"> Password </label>
+          <input type="password" id="password" class="form-control" aria-describedby="passwordHelpInline" aria-label="Password" name="password" ngModel required minlength="8">
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-danger" [disabled]="!f.valid">Accedi</button>
+      <br>
+      <div class="mb-3 form-check">
+        <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      </div>
+      <br>
+      <a routerLink="/forgotten">Password dimenticata?</a>
+    </form>
+  </form>
+</div>
